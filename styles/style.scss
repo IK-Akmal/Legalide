@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Martel:wght@700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap');
+$primary-color: #D0A144;
+$secondary-color-1: #FDB602;
+$secondary-color-2: #784F33;
+$secondary-color-3: #DBB468;
+$secondary-color-4: #295C7A;
+$background-gradient-1: linear-gradient(270deg, #295C7A -1.04%, #0072B5 100%);
+$text-color: #252B42;
+$second-text-color: #737373;
+$light-text-color: #FFFFFF;
+$dark-background-color: #252B42;
+$light-background-color: #FFFFFF;
+$hover-color: #2A7CC7;
+$disabled-element-color: #8EC2F2;
+$muted-color: #BDBDBD;
+$success-color: #2DC071;
+$alert-color: #E77C40;
+$danger-color: #E74040;
+
+
+//shadow effect
+
+$shadow: 0px 13px 19px rgba(0, 0, 0, 0.07);
+$dramatic: -31px -22px 19px rgba(0, 0, 0, 0.3);
+$light-dropshadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+$text-shadow: 0px 13px 19px rgba(0, 0, 0, 0.24);
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.container {
+  max-width: 1050px;
+  margin: 0 auto;
+}
+
+@mixin fontTemplate($fontFamliy,
+  $fontWeigth,
+  $fontSize,
+  $lineHeight,
+  $letterSpacing ) {
+  font-family: $fontFamliy;
+  font-style: normal;
+  font-weight: $fontWeigth;
+  font-size: $fontSize;
+  line-height: $lineHeight;
+  letter-spacing: $letterSpacing;
+}
+
+h1 {
+  @include fontTemplate("Martel", 900, 58px, 65px, 0.2px);
+}
+
+h2 {
+  @include fontTemplate("Martel", 700, 40px, 50px, 0.2px);
+}
+
+h3 {
+  @include fontTemplate("Martel", 700, 24px, 32px, 0.1px);
+}
+
+h4 {
+  @include fontTemplate("Montserrat", 500, 20px, 30px, 0.2px);
+}
+
+h5 {
+  @include fontTemplate("Martel", 700, 16px, 24px, 0.1px);
+}
+
+h6 {
+  @include fontTemplate("Martel", 700, 14px, 24px, 0.2px);
+}
+
+.btn-text {
+  @include fontTemplate("Open Sans", 700, 14px, 28px, 0.2px);
+}
+
+.mobile-menu {
+  @include fontTemplate("Open Sans", 400, 30px, 45px, 0.2px);
+}
+
+.paragraph {
+  @include fontTemplate("Open Sans", 400, 14px, 20px, 0.2px);
+}
+
+.list {
+  @include fontTemplate("Open Sans", 400, 20px, 30px, 0.2px);
+}
+
+.link {
+  @include fontTemplate("Open Sans", 600, 14px, 24px, 0.2px);
+  text-decoration: none;
+}
+
+.header {
+  background-image: url(../assets/img/background.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  .topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1320px;
+    margin: 0 60px;
+    padding: 35px 0 35px 135px;
+
+    .brend {
+      color: $text-color;
+    }
+
+    .navbar {
+      display: flex;
+
+      &__collapse{
+        display:flex;
+        gap: 40px;
+      }
+
+      &__list {
+        display: flex;
+        align-items: center;
+        gap: 25px;
+
+        list-style: none;
+      }
+
+      &__link {
+        color: $second-text-color;
+      }
+
+      &__icon {
+        width: 16px;
+        height: 16px;
+      }
+
+      &__btn {
+        background: none;
+        border: none;
+        cursor: pointer;
+      }
+    }
+  }
+}
