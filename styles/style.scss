@@ -146,7 +146,7 @@ p {
 .header {
   background-image: url(../assets/img/background.png);
   background-repeat: no-repeat;
-  // background-size: cover;
+  background-size: cover;
 
   .navbar-wrapper {
     display: flex;
@@ -229,58 +229,112 @@ p {
 
 .main {
   .features-practice {
+    background-color: $light-background-color;
     padding: 100px 0;
     text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 80px;
-
-    >div:first-child {
-      width: 430px;
-    }
-
-    >div:last-child {
-      display: flex;
-      justify-content: center;
-      gap: 34px;
-
-      .card {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding: 30px 40px;
-        gap: 10px;
-
-        width: 325px;
-        height: 147px;
-
-        box-shadow: $shadow;
-        border-radius: 5px;
-        color: $text-color;
-        background: #F9F9F9;
-
-        >img {
-          width: 53px;
-          height: 53px;
-        }
-      }
-
-      .card--blue{
-        background-color: $secondary-color-4;
-        color: white;
-      }
-    }
 
     &__title {
       color: $text-color;
+      margin-bottom: 10px;
     }
 
     &__subtitle {
       color: $second-text-color;
     }
 
+    .card-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 34px;
 
+      margin-top: 80px;
+    }
+
+    &__card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 30px 40px;
+      gap: 10px;
+
+      width: 325px;
+      height: 147px;
+
+      box-shadow: $shadow;
+      border-radius: 5px;
+      color: $text-color;
+      background: #F9F9F9;
+
+      >img {
+        width: 53px;
+        height: 53px;
+      }
+    }
+
+    .card--blue {
+      background-color: $secondary-color-4;
+      color: white;
+    }
+  }
+
+  .features-advice {
+    background-color: #FAFAFA;
+    padding: 125px 0 110px 0;
+    text-align: center;
+
+    &__title {
+      color: $text-color;
+      margin-bottom: 10px;
+    }
+
+    &__subtitle {
+      color: $second-text-color;
+    }
+
+    .card-wrapper {
+      display: flex;
+
+      justify-content: space-between;
+      gap: 35px;
+      margin-top: 45px;
+
+    }
+
+    &__card {
+
+      display: flex;
+      flex-direction: column;
+
+      text-align: start;
+      background-color: $light-background-color;
+
+      width: 230px;
+
+      >div {
+        padding: 30px;
+        flex-grow: 1;
+
+        .card__title {
+          color: $text-color;
+          margin-bottom: 15px;
+        }
+
+        .card__subtitle {
+          color: $second-text-color;
+        }
+      }
+
+      img {
+        height: 138px;
+        width: 230px;
+      }
+    }
+
+  }
+  .about{
+    text-align: center;
+    
   }
 
 }
