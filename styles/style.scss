@@ -332,9 +332,70 @@ p {
     }
 
   }
-  .about{
+
+  .about {
     text-align: center;
-    
+    padding: 100px 0 143px 0;
+
+    &__title {
+      color: $text-color;
+      margin-bottom: 15px;
+    }
+
+    &__subtitle {
+      margin: 0 auto;
+      width: 468px;
+      color: $second-text-color;
+    }
+
+    .about__content {
+      margin-top: 100px;
+      display: flex;
+      gap: 120px;
+      text-align: left;
+    }
+
+    .video-wrapper {
+      position: relative;
+
+      .back-drop {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(180deg, rgba(0, 0, 0, 0) 14.58%, rgba(56, 56, 56, 0.84) 100%);
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .btn-play {
+
+          width: 97px;
+          height: 95px;
+
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          background: #295C7A;
+          border-radius: 50%;
+          padding-left: 5px;
+        }
+      }
+
+      .media-about {
+        width: 600px;
+        height: 440px;
+        object-fit: cover;
+      }
+    }
+
+    .video-play {
+      position: static;
+    }
+
   }
 
 }
