@@ -396,6 +396,50 @@ p {
       position: static;
     }
 
+    .description-wrapper {
+
+      h1,
+      h5 {
+        color: $text-color;
+      }
+
+      p,
+      h6 {
+        color: $second-text-color;
+      }
+
+      p{
+        margin-bottom: 50px;
+      }
+
+      div+div{
+        margin-top: 30px;
+      }
+      >div {
+        display: grid;
+        grid-template-columns: 30px 1fr;
+        grid-template-rows: auto auto;
+        grid-template-areas: "svg title"
+          " _ subtitle";
+        gap: 5px 21px;  
+
+        img {
+          grid-area: svg;
+        }
+
+        h5 {
+          grid-area: title;
+        }
+
+        h6 {
+          grid-area: subtitle;
+        }
+
+      }
+    }
   }
+
+
+
 
 }
