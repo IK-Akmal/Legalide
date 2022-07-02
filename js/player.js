@@ -7,19 +7,24 @@ export default function Player() {
     btnPlay.addEventListener("click", (event) => {
         player.play();
         blackDrop.style.display = "none";
-    })
-
-    player.addEventListener("play", () => {
         player.setAttribute("controls", true);
     })
 
-    player.addEventListener("ended", () => {
+    player.addEventListener("play", (event) => {
+   
+        player.setAttribute("controls", true);
+    })
+
+    player.addEventListener("ended", (event) => {
+     
         player.removeAttribute("controls");
         blackDrop.style.display = "flex";
     })
-    player.addEventListener("pause", () => {
-        player.removeAttribute("controls");
-        blackDrop.style.display = "flex";
-    })
+    // player.addEventListener("pause", (event) => {
+    //     event.stopPropagation()
+    //     console.log("pause");
+    //     player.removeAttribute("controls");
+    //     blackDrop.style.display = "flex";
+    // })
 
 }
