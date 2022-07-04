@@ -1,2 +1,2 @@
 # Legalide
-# [Demo Vercel](legalide.vercel.app)
+# [Demo Vercel](https://legalide.vercel.app)
